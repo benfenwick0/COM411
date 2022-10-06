@@ -31,6 +31,35 @@ elif number_2 < number_1:
 else:
     print("Both are equal")
 
+count = 1
+
+while count ==1:
+
+
+    num_1 = int(input("Enter first number"))
+    num_2 = int(input("Enter second number"))
+    num_3 = int(input("Enter third number"))
+
+    if num_1 % 2 ==0 and num_2 % 2 ==0 and num_3 % 2 ==0:
+        print("All numbers are even")
+    elif num_1 % 2 ==0 and num_2 % 2 ==0 and num_3 % 2 !=0:
+        print("Two even 1 odd")
+    elif num_1 % 2 ==0 and num_2 % 2 !=0 and num_3 % 2 ==0:
+        print("Two even 1 odd")
+    elif num_1 % 2 !=0 and num_2 % 2 ==0 and num_3 % 2 ==0:
+        print("Two even 1 odd")
+    elif num_1 % 2 !=0 and num_2 % 2 ==0 and num_3 % 2 !=0:
+        print("1 even 2 odd")
+    elif num_1 % 2 !=0 and num_2 % 2 !=0 and num_3 % 2 ==0:
+        print("1 even 2 odd")
+    elif num_1 % 2 ==0 and num_2 % 2 !=0 and num_3 % 2 !=0:
+        print("1 even 2 odd")
+    else:
+        print("all odd")
+
+
+
+
 
 
 
