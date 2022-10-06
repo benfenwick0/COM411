@@ -32,3 +32,9 @@ else:
     print("Both are equal")
 
 
+
+
+
+print("DONE")
+
+
