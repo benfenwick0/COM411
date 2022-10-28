@@ -25,13 +25,13 @@ def display_menu():
     print(
     """
     
-    Please select one of the following options:
-    [1] Display the names of all passengers
-    [2] Display the number of passengers that survived
-    [3] Display the number of passengers per gender
-    [4] Display the number of passengers per age group
+Please select one of the following options:
+[1] Display the names of all passengers
+[2] Display the number of passengers that survived
+[3] Display the number of passengers per gender
+[4] Display the number of passengers per age group
     
-    """)
+""")
     return int(input())
 
 
@@ -53,6 +53,33 @@ def display_num_survivors():
     print(f"{num_survived} passengers survived")
 
 
+def display_passengers_per_gender():
+    females = 0
+    males = 0
+    for i in records:
+        gender = i[4]
+        if gender == 'male':
+            males += 1
+        elif gender == 'female':
+            females += 1
+
+    print(f"females:{females}, males:{males}")
+
+def display_passengers_per_age_group():
+    children = 0
+    adults = 0
+    elderly = 0
+    for i in records:
+        if i[5] != "":
+            age = float(i[5])
+            if age < 18:
+                children += 1
+            elif age < 65:
+                adults += 1
+            else:
+                elderly += 1
+    print(f"children:{children}, adults:{adults}, elderly:{elderly}")
+
 
 if __name__ == "__main__":
     run()
@@ -62,6 +89,10 @@ if __name__ == "__main__":
         display_passenger_names()
     elif select_option == 2:
         display_num_survivors()
+    elif select_option == 3:
+        display_passengers_per_gender()
+    elif select_option == 4:
+        display_passengers_per_age_group()
     else:
         print("Error! Option not recognised!")
 
