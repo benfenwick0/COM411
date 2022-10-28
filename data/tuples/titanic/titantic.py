@@ -43,9 +43,27 @@ def display_passenger_names():
         passenger_name = i[3]
         print(passenger_name)
 
+def display_num_survivors():
+    num_survived = 0
+    for i in records:
+        survival = int(i[1])
+        if survival == 1:
+            num_survived += 1
+
+    print(f"{num_survived} passengers survived")
+
+
 
 if __name__ == "__main__":
     run()
     select_option = display_menu()
     print(f"You have selected option: {select_option}")
+    if select_option == 1:
+        display_passenger_names()
+    elif select_option == 2:
+        display_num_survivors()
+    else:
+        print("Error! Option not recognised!")
+
+
 
